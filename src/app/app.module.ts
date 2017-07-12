@@ -1,18 +1,26 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './components/app/app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { MainNavComponent } from './components/main-nav/main-nav.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './components/app/app.component';
+import {HeaderComponent} from './components/header/header.component';
+import {MainNavComponent} from './components/main-nav/main-nav.component';
+import {SidePanelComponent} from './components/side-panel/side-panel.component';
+import {SideNavComponent} from './components/side-nav/side-nav.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    MainNavComponent
+    MainNavComponent,
+    SidePanelComponent,
+    SideNavComponent,
+    FooterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -23,4 +31,4 @@ import { MainNavComponent } from './components/main-nav/main-nav.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

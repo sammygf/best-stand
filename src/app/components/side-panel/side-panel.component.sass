@@ -1,0 +1,36 @@
+@import "../../styles/constants"
+@import "../../styles/mixin"
+
+$line-height: rem(30)
+
+.md-side-panel
+  background: #1670c0
+  height: 100%
+  width: 100%
+  position: absolute
+
+.md-side-panel__contacts
+  margin-top: $header-margin-top
+  padding-left: $side-panel-padding-left
+
+.md-side-panel__contact
+  color: #f7f5f8
+  font-size: 1rem
+  position: relative
+  height: $line-height
+  line-height: $line-height
+  white-space: nowrap
+
+  > img
+    position: relative
+    top: 50%
+    transform: translateY(-50%)
+    width: rem(14)
+    float: left
+
+  > span
+    margin-left: 10%
+
+.md-side-panel__nav
+  margin-top: rem(100)
+

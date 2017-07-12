@@ -1,0 +1,41 @@
+@import "../../styles/constants"
+@import "../../styles/mixin"
+
+.md-side-nav__item
+  color: #c4d7e8
+  cursor: pointer
+  height: rem(60)
+  line-height: rem(60)
+  padding-left: $side-panel-padding-left
+  position: relative
+  transition: color linear .2s
+
+  > span
+    white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden
+    position: relative
+    z-index: 1
+
+  &:hover
+    color: #fff
+
+  &:before
+    opacity: 0
+    content: ''
+    display: block
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    right: 0
+    background: #1270ba
+    box-shadow: rem(6) rem(16) rem(45) 0 rgba(0, 0, 0, 0.4)
+    transition: opacity linear .1s, transform ease-in-out .2s
+    transform-origin: right center
+
+.md-side-nav__item_selected
+  &:before
+    opacity: 1
+    transform: scaleX(1.03)
+

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, HostListener} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'app works!';
+  constructor() {
+    this.updateFontSize();
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    this.updateFontSize();
+  }
+
+  updateFontSize() {
+    const html = document.documentElement;
+    html.style['font-size'] = `${16 * html.clientWidth / 1440}px`;
+  }
 }

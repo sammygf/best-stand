@@ -1,3 +1,21 @@
+@import "../../styles/constants"
+
+$side-panel-width: 18%
+
 .lt-header
-  width: 100%
-  margin-top: 60px
+  width: 100 - $side-panel-width
+  margin-top: $header-margin-top
+  z-index: 1
+  position: relative
+
+.lt-side-panel
+  width: $side-panel-width
+  position: fixed
+  height: 100%
+  right: 0
+  top: 0
+  z-index: 1
+
+.lt-content
+  z-index: 0
+  width: 100 - $side-panel-width

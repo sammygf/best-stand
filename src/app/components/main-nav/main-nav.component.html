@@ -1,6 +1,6 @@
 <div class="md-main-nav">
-  <div class="md-main-nav__item">Требования к макетам</div>
-  <div class="md-main-nav__item">Требования к макетам</div>
-  <div class="md-main-nav__item">Требования к макетам</div>
-  <div class="md-main-nav__item">Требования к макетам</div>
+  <div class="md-main-nav__item md-main-nav__item_home" routerLink="/">
+    <img src="assets/home.png" alt="">
+  </div>
+  <div class="md-main-nav__item" *ngFor="let route of routes" routerLink="{{route.path}}">{{route.data.title}}</div>
 </div>
