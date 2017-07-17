@@ -1,0 +1,55 @@
+@import '../../styles/mixin'
+
+.md-home-offer
+  width: rem(220)
+  margin-top: rem(60)
+  display: inline-block
+
+.md-home-offer__image
+  height: rem(260)
+  background: #2d92db
+  border-radius: rem(10)
+  position: relative
+
+  > img
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    max-width: 90%
+    max-height: 90%
+
+.md-home-offer__content
+  padding: 0 rem(8)
+
+.md-home-offer__title,
+.md-home-offer__sub-title,
+.md-home-offer__description
+  width: 100%
+
+.md-home-offer__title
+  margin-top: rem(33)
+  color: #1670c0
+  font-size: rem(25)
+  height: rem(25)
+  font-weight: bold
+  white-space: nowrap
+
+.md-home-offer__sub-title
+  color: #86929d
+  margin-top: rem(10)
+  font-size: rem(13)
+  height: rem(13)
+
+.md-home-offer__description
+  margin-top: rem(25)
+  font-size: rem(12)
+  height: rem(80)
+  overflow: hidden
+
+.md-home-offer__link
+  display: block
+  margin-top: rem(35)
+  font-size: rem(17)
+  height: rem(17)
+  color: #2d93dc

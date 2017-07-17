@@ -1,0 +1,8 @@
+<div class="md-home-offers">
+  <div class="md-home-offers__caption">Что мы предлагаем?</div>
+  <div class="md-home-offers__items">
+    <div class="md-home-offer__item" *ngFor="let offer of offers">
+      <home-offer [model]="offer"></home-offer>
+    </div>
+  </div>
+</div>

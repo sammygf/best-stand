@@ -2,6 +2,20 @@ import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {HomeComponent} from './components/home/home.component';
 
+const routeUrls = {
+  REQUIREMENTS: 'requirements',
+  DELIVERY: 'delivery',
+  SERVICES: 'services',
+  CONTACTS: 'contacts',
+  PHOTO_STAND: 'photo_stand',
+  PRESS_WALL: 'press_wall',
+  FIGURES: 'figures',
+  SENSORMATIC: 'sensormatic',
+  MOBILE_STAND: 'mobile_stand',
+  SIGNBOARDS: 'signboards',
+  LIGHTBOX: 'lightbox'
+};
+
 const routes: Routes = [
   {
     path: '',
@@ -12,35 +26,35 @@ const routes: Routes = [
     }
   },
   {
-    path: 'requirements',
+    path: routeUrls.REQUIREMENTS,
     children: [],
     data: {
       title: 'Требования к макетам'
     }
   },
   {
-    path: 'delivery',
+    path: routeUrls.DELIVERY,
     children: [],
     data: {
       title: 'Доставка и монтаж'
     }
   },
   {
-    path: 'services',
+    path: routeUrls.SERVICES,
     children: [],
     data: {
       title: 'Услуги'
     }
   },
   {
-    path: 'contacts',
+    path: routeUrls.CONTACTS,
     children: [],
     data: {
       title: 'Контакты'
     }
   },
   {
-    path: 'photo-stand',
+    path: routeUrls.PHOTO_STAND,
     children: [],
     data: {
       title: 'Фотостенд',
@@ -48,7 +62,7 @@ const routes: Routes = [
     }
   },
   {
-    path: 'press-wall',
+    path: routeUrls.PRESS_WALL,
     children: [],
     data: {
       title: 'Пресс-волл',
@@ -56,7 +70,7 @@ const routes: Routes = [
     }
   },
   {
-    path: 'figure',
+    path: routeUrls.FIGURES,
     children: [],
     data: {
       title: 'Ростовые фигуры',
@@ -64,7 +78,7 @@ const routes: Routes = [
     }
   },
   {
-    path: 'sensormatic',
+    path: routeUrls.SENSORMATIC,
     children: [],
     data: {
       title: 'Сенсорматики',
@@ -72,7 +86,7 @@ const routes: Routes = [
     }
   },
   {
-    path: 'mobile-stand',
+    path: routeUrls.MOBILE_STAND,
     children: [],
     data: {
       title: 'Мобильные стенды',
@@ -80,7 +94,7 @@ const routes: Routes = [
     }
   },
   {
-    path: 'signboard',
+    path: routeUrls.SIGNBOARDS,
     children: [],
     data: {
       title: 'Вывески',
@@ -94,6 +108,9 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {
+  get routeUrls() {
+    return routeUrls;
+  }
   getRoutes(isSide: boolean) {
     return routes.filter((route) => {
       return route.path.length > 0 && !!route.data.isSide === isSide;

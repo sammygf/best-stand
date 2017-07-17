@@ -11,6 +11,8 @@ import {SidePanelComponent} from './components/side-panel/side-panel.component';
 import {SideNavComponent} from './components/side-nav/side-nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
+import { HomeOffersComponent } from './components/home-offers/home-offers.component';
+import { HomeOfferComponent } from './components/home-offer/home-offer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { HomeComponent } from './components/home/home.component';
     SidePanelComponent,
     SideNavComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    HomeOffersComponent,
+    HomeOfferComponent
   ],
   imports: [
     BrowserModule,
