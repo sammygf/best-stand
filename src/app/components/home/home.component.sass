@@ -2,7 +2,6 @@
 
 .md-home
   width: 100%
-  height: rem(650)
 
 .md-home__background
   position: absolute
@@ -12,15 +11,15 @@
 
 .md-home__top
   position: relative
-  height: rem(720)
+  height: rem(725)
 
   > img
     display: block
     position: absolute
-    top: rem(34)
+    top: rem(50)
     left: 13%
     width: 24%
-    max-height: 100%
+    height: rem(640)
 
 .md-home__content
   position: absolute
@@ -51,4 +50,38 @@
 
 .md-home__content__h3
   color: #f7f5f8
-  font-size: 1.4rem
+  font-size: rem(22)
+
+.md-home__content__button
+  background: #feb549
+  width: rem(130)
+  height: rem(40)
+  line-height: rem(40)
+  border: none
+  border-radius: rem(25)
+  margin-top: rem(65)
+  cursor: pointer
+  transition: transform linear .3s
+
+  &:active
+    transform: scale(.9)
+
+.md-home__description
+  color: #f7f5f8
+  font-size: rem(17)
+  position: absolute
+  right: rem(105)
+  bottom: rem(90)
+  width: rem(370)
+  height: rem(50)
+  text-align: right
+
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    width: rem(40)
+    height: rem(6)
+    background: #ffffff
+    right: 0
+    top: rem(-35)
