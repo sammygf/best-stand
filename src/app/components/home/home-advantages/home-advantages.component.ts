@@ -30,6 +30,6 @@ export class HomeAdvantagesComponent {
         из картона, пластика и металлической трубы.`,
         'figure.png'
       )
-    ]
+    ];
   }
 }

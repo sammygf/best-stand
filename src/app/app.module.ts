@@ -16,6 +16,9 @@ import { HomeOfferComponent } from './components/home/home-offers/home-offer/hom
 import { HomeAdvantagesComponent } from './components/home/home-advantages/home-advantages.component';
 import { AdvantageComponent } from './components/home/home-advantages/home-advantage/home-advantage.component';
 import { HomeTopComponent } from './components/home/home-top/home-top.component';
+import { HomeAboutComponent } from './components/home/home-about/home-about.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { HomeClientsComponent } from './components/home/home-clients/home-clients.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { HomeTopComponent } from './components/home/home-top/home-top.component'
     HomeOfferComponent,
     HomeAdvantagesComponent,
     AdvantageComponent,
-    HomeTopComponent
+    HomeTopComponent,
+    HomeAboutComponent,
+    SpinnerComponent,
+    HomeClientsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,183 @@
+$size: 120px
+$color1: #3A60DB
+$color2: #FFFFFF
+
+.hidden
+  opacity: 0
+
+.load
+  transition: all linear .6s
+  pointer-events: none
+  background: #31a0f0
+  z-index: 999
+  width: 100%
+  height: 100vh
+  position: fixed
+  top: 0
+  left: 0
+  &:before,
+  &:after,
+  .dot,
+  .outline
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    border-radius: 50%
+
+  .dot
+    width: $size - $size / 100 * 20
+    height: $size - $size / 100 * 20
+    background: $color2
+    animation: in 4s linear infinite
+    z-index: 2
+
+  &:before
+    content: ""
+    width: 0
+    height: 0
+    background: $color1
+    animation: out1 4s linear infinite
+
+  &:after
+    content: ""
+    width: 0
+    height: 0
+    background: $color2
+    animation: out2 4s linear infinite
+
+  .outline
+    width: $size
+    height: $size
+    z-index: 2
+    span
+      width: $size / 2 + 8
+      height: $size / 2 + 8
+      transform-origin: 100% 100%
+      transform: rotate(45deg) skewX(80deg)
+      overflow: hidden
+      position: absolute
+      bottom: 50%
+      right: 50%
+      animation: outline 4s linear infinite
+      &:before
+        content: ""
+        display: block
+        border: solid 5px #fff
+        width: 200%
+        height: 200%
+        border-radius: 50%
+        transform: skewX(-80deg)
+        animation: outlineBefore 4s linear infinite
+
+@keyframes outline
+  0%
+    transform: rotate(0deg) skewX(80deg)
+
+  25%
+    transform: rotate(500deg) skewX(15deg)
+
+  50%
+    transform: rotate(1000deg) skewX(40deg)
+
+  75%
+    transform: rotate(1500deg) skewX(60deg)
+
+  100%
+    transform: rotate(2160deg) skewX(80deg)
+
+@keyframes outlineBefore
+  0%
+    transform: skewX(-80deg)
+    border: solid 5px #ffffff
+
+  25%
+    transform: skewX(-15deg)
+    border: solid 5px #ffffff
+
+  49%
+    border: solid 5px #ffffff
+
+  50%
+    transform: skewX(-40deg)
+    border: solid 5px #3463EB
+
+  75%
+    transform: skewX(-60deg)
+    border: solid 5px #3463EB
+
+  100%
+    transform: skewX(-80deg)
+    border: solid 5px #3463EB
+
+@keyframes in
+  0%
+    width: $size + $size / 100 * 20
+    height: $size + $size / 100 * 20
+    background: $color2
+
+  40%
+    width: 0
+    height: 0
+    background: $color2
+
+  41%
+    width: 0
+    height: 0
+    background: $color1
+
+  50%
+    width: $size + $size / 100 * 20
+    height: $size + $size / 100 * 20
+    background: $color1
+
+  90%
+    width: 0
+    height: 0
+    background: $color1
+
+  91%
+    width: 0
+    height: 0
+    background: $color2
+
+  100%
+    width: $size + $size / 100 * 20
+    height: $size + $size / 100 * 20
+    background: $color2
+
+@keyframes out1
+  0%
+    width: 0
+    height: 0
+
+  30%
+    width: 120vw
+    height: 120vw
+
+  100%
+    width: 120vw
+    height: 120vw
+
+@keyframes out2
+  0%
+    width: 0
+    height: 0
+
+  30%
+    width: 0
+    height: 0
+
+  60%
+    width: 120vw
+    height: 120vw
+
+  100%
+    width: 120vw
+    height: 120vw
+
+*,
+*:after,
+*::before
+  margin: 0
+  padding: 0
