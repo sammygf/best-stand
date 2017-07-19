@@ -1,0 +1,79 @@
+@import '../../../styles/mixin'
+
+.md-home-top
+  position: relative
+  height: rem(725)
+
+  > img
+    display: block
+    position: absolute
+    top: rem(50)
+    left: 13%
+    width: 24%
+    height: rem(640)
+
+.md-home-top__content
+  position: absolute
+  top: rem(170)
+  left: 42%
+  width: 40%
+  height: rem(200)
+
+.md-home-top__content__h1,
+.md-home-top__content__h2,
+.md-home-top__content__h3
+  display: block
+  width: 100%
+
+.md-home-top__content__h2
+  color: #f7f5f8
+  font-size: rem(32)
+  text-indent: rem(-2)
+  font-weight: bold
+  text-transform: uppercase
+
+.md-home-top__content__h1
+  color: #0459ad
+  font-size: rem(104)
+  font-weight: bold
+  text-indent: rem(-5.44)
+  text-transform: uppercase
+
+.md-home-top__content__h3
+  color: #f7f5f8
+  font-size: rem(22)
+
+.md-home-top__content__button
+  background: #feb549
+  width: rem(130)
+  height: rem(40)
+  line-height: rem(15)
+  font-size: rem(15)
+  border: none
+  border-radius: rem(25)
+  margin-top: rem(65)
+  cursor: pointer
+  transition: transform linear .3s
+
+  &:active
+    transform: scale(.9)
+
+.md-home-top__description
+  color: #f7f5f8
+  font-size: rem(17)
+  position: absolute
+  right: rem(105)
+  bottom: rem(90)
+  width: rem(370)
+  height: rem(50)
+  text-align: right
+
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    width: rem(40)
+    height: rem(6)
+    background: #ffffff
+    right: 0
+    top: rem(-35)

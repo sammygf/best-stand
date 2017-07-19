@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {HomeOffer} from '../../models/home-offer';
-import {AppRoutingModule} from '../../app-routing.module';
+import {HomeOffer} from '../../../models/home-offer';
+import {AppRoutingModule} from '../../../app-routing.module';
 
 @Component({
   selector: 'home-offers',
