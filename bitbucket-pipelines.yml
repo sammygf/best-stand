@@ -13,3 +13,10 @@ pipelines:
         script: # Modify the commands below to build your repository.
           - npm install
           - npm run lint
+  branches:
+    master:
+      - step:
+          script:
+            - apt-get update
+            - apt-get -qq install git-ftp
+            - git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD ftp://vhost1-de.parkovka.ua/www/h32233.parkovka.biz.ua
