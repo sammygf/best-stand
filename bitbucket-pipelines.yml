@@ -23,4 +23,4 @@ pipelines:
             - npm run build
             - apt-get update
             - apt-get -qq install git-ftp
-            - git ftp push --auto-init --syncroot dist --user $FTP_USERNAME --passwd $FTP_PASSWORD ftp://vhost1-de.parkovka.ua/www/h32233.parkovka.biz.ua
+            - git ftp init --syncroot dist --user $FTP_USERNAME --passwd $FTP_PASSWORD ftp://vhost1-de.parkovka.ua/www/h32233.parkovka.biz.ua
