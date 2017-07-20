@@ -1,0 +1,105 @@
+@import '../../styles/constants'
+@import '../../styles/mixin'
+
+.md-contacts
+  padding: rem(115) 0 rem(44) $home-padding-left
+  position: relative
+  height: rem(668)
+
+.md-contacts__caption
+  font-size: rem(37)
+  line-height: rem(50)
+  width: rem(306)
+  color: #fff
+  text-transform: uppercase
+  font-weight: bold
+
+.md-contacts__info
+  position: absolute
+  top: rem(364)
+  
+.md-contacts__info-caption
+  font-size:  rem(22)
+  line-height: rem(27)
+  color: #fff
+  margin-bottom: rem(27)
+  
+.md-contacts__info-heading
+  color: #0f5baa
+  font-size: rem(16)
+  margin-top: rem(6)
+
+.md-contacts__info-link
+  display: block
+  text-decoration: none
+  color: #fff
+  font-size: rem(16)
+  margin-top: rem(5)
+  
+.md-contacts__form-group
+  overflow: hidden
+  
+.md-contacts__form
+  position: absolute
+  width: rem(600)
+  bottom: rem(80)
+  right: rem(105)
+
+.md-contacts__form-group_left
+  float: left
+
+.md-contacts__form-group_right
+  float: right
+
+.md-contacts__form-control
+  width: rem(183)
+  font-size: rem(13)
+  padding: rem(7) rem(14)
+  border-radius: 5px
+  outline: none
+  border: none
+  &::placeholder
+    color: #86929d
+
+.md-contacts__form-icon
+  display: inline-block
+  vertical-align: middle
+  width: rem(13)
+  margin: 0 rem(10)
+
+.md-contacts__form-textarea
+  height: rem(167)
+  width: 100%
+  background: #FFFFFF
+  resize: vertical
+  font-size: rem(13)
+  border-radius: 10px
+  margin-top: rem(32)
+  outline: none
+  border: none
+  padding: rem(16) rem(24)
+  &::placeholder
+    color: #86929d
+
+.md-contacts__form-button
+  background: #feb549
+  width: rem(130)
+  height: rem(40)
+  line-height: rem(15)
+  font-size: rem(15)
+  border: none
+  border-radius: rem(25)
+  margin-top: rem(20)
+  float: right
+  cursor: pointer
+  transition: transform linear .3s
+
+  &:active
+    transform: scale(.9)
+
+.md-contacts__form-info
+  display: inline-block
+  margin-top: rem(34)
+  font-size: rem(16)
+  color: #FFFFFF
+  padding-left: rem(10)

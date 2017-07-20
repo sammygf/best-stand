@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {HomeComponent} from './components/home/home.component';
+import {ContactsComponent} from './components/contacts/contacts.component';
 
 const routeUrls = {
   REQUIREMENTS: 'requirements',
@@ -48,6 +49,7 @@ const routes: Routes = [
   },
   {
     path: routeUrls.CONTACTS,
+    component: ContactsComponent,
     children: [],
     data: {
       title: 'Контакты'
