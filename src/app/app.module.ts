@@ -19,6 +19,7 @@ import { HomeTopComponent } from './components/home/home-top/home-top.component'
 import { HomeAboutComponent } from './components/home/home-about/home-about.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { HomeClientsComponent } from './components/home/home-clients/home-clients.component';
+import { ContactsComponent } from './components/contacts/contacts.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { HomeClientsComponent } from './components/home/home-clients/home-client
     HomeTopComponent,
     HomeAboutComponent,
     SpinnerComponent,
-    HomeClientsComponent
+    HomeClientsComponent,
+    ContactsComponent
   ],
   imports: [
     BrowserModule,
