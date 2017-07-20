@@ -20,6 +20,8 @@ import { HomeAboutComponent } from './components/home/home-about/home-about.comp
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { HomeClientsComponent } from './components/home/home-clients/home-clients.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
+import { ServicesComponent } from './components/services/services.component';
+import { ServiceComponent } from './components/services/service/service.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { ContactsComponent } from './components/contacts/contacts.component';
     HomeAboutComponent,
     SpinnerComponent,
     HomeClientsComponent,
-    ContactsComponent
+    ContactsComponent,
+    ServicesComponent,
+    ServiceComponent
   ],
   imports: [
     BrowserModule,

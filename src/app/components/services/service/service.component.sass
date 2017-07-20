@@ -1,0 +1,49 @@
+@import '../../../styles/mixin'
+
+.md-service
+  width: rem(220)
+  margin-top: rem(60)
+  display: inline-block
+
+.md-service__image
+  height: rem(171)
+  background: #2d92db
+  border-radius: rem(10)
+  position: relative
+  
+  > img
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    max-width: 90%
+    max-height: 90%
+
+.md-service__content
+  padding: 0 rem(8)
+
+.md-service__title,
+.md-service__description
+  width: 100%
+
+.md-service__title
+  margin-top: rem(60)
+  color: #FFFFFF
+  font-size: rem(22)
+  height: rem(71)
+  font-weight: bold
+
+.md-service__description
+  margin-top: rem(25)
+  font-size: rem(13)
+  line-height: rem(22)
+  height: rem(255)
+  color: #0f5baa
+  overflow: hidden
+
+.md-service__link
+  display: block
+  margin-top: rem(15)
+  font-size: rem(17)
+  height: rem(17)
+  color: #FFFFFF

@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {HomeComponent} from './components/home/home.component';
 import {ContactsComponent} from './components/contacts/contacts.component';
+import {ServicesComponent} from './components/services/services.component';
 
 const routeUrls = {
   REQUIREMENTS: 'requirements',
@@ -42,6 +43,7 @@ const routes: Routes = [
   },
   {
     path: routeUrls.SERVICES,
+    component: ServicesComponent,
     children: [],
     data: {
       title: 'Услуги'
