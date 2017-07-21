@@ -3,6 +3,7 @@ import {Routes, RouterModule} from '@angular/router';
 import {HomeComponent} from './components/home/home.component';
 import {ContactsComponent} from './components/contacts/contacts.component';
 import {ServicesComponent} from './components/services/services.component';
+import {RequirementsComponent} from './components/requirements/requirements.component';
 
 const routeUrls = {
   REQUIREMENTS: 'requirements',
@@ -29,6 +30,7 @@ const routes: Routes = [
   },
   {
     path: routeUrls.REQUIREMENTS,
+    component: RequirementsComponent,
     children: [],
     data: {
       title: 'Требования к макетам'
@@ -115,6 +117,7 @@ export class AppRoutingModule {
   get routeUrls() {
     return routeUrls;
   }
+
   getRoutes(isSide: boolean) {
     return routes.filter((route) => {
       return route.path.length > 0 && !!route.data.isSide === isSide;

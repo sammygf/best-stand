@@ -1,0 +1,12 @@
+<div class="md-requirements-print">
+  <h2>Общие требования к <br/> широкоформатной печати</h2>
+  <h3>Для вывесок, стендов, изготовления пресс-воллов, мобильных стендов,
+    <br/>ростовых фигур и другой широкоформатной печати мы принимаем
+    <br/>файлы в форматах:
+  </h3>
+  <div class="md-requirements-print__items">
+    <div class="md-requirements-print__item" *ngFor="let requirement of model">
+      <requirement-print [model]="requirement"></requirement-print>
+    </div>
+  </div>
+</div>

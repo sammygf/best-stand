@@ -22,6 +22,9 @@ import { HomeClientsComponent } from './components/home/home-clients/home-client
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { ServicesComponent } from './components/services/services.component';
 import { ServiceComponent } from './components/services/service/service.component';
+import { RequirementsComponent } from './components/requirements/requirements.component';
+import { RequirementsPrintComponent } from './components/requirements/requirements-print/requirements-print.component';
+import { RequirementPrintComponent } from './components/requirements/requirements-print/requirement-print/requirement-print.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,10 @@ import { ServiceComponent } from './components/services/service/service.componen
     HomeClientsComponent,
     ContactsComponent,
     ServicesComponent,
-    ServiceComponent
+    ServiceComponent,
+    RequirementsComponent,
+    RequirementsPrintComponent,
+    RequirementPrintComponent
   ],
   imports: [
     BrowserModule,

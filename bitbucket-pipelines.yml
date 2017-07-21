@@ -20,6 +20,7 @@ pipelines:
             - node
           script:
             - npm install
+            - npm run lint
             - npm run build
             - apt-get update
             - apt-get -qq install git-ftp
