@@ -16,8 +16,6 @@ pipelines:
   branches:
     master:
       - step:
-          caches:
-            - node
           script:
             - npm install
             - npm run lint

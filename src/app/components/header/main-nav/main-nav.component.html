@@ -2,5 +2,8 @@
   <div class="md-main-nav__item md-main-nav__item_home" routerLink="/">
     <img src="assets/home.png" alt="">
   </div>
-  <div class="md-main-nav__item" *ngFor="let route of routes" routerLink="{{route.path}}">{{route.data.title}}</div>
+  <div class="md-main-nav__item"
+       *ngFor="let route of routes"
+       routerLinkActive="md-main-nav__item_active"
+       routerLink="{{route.path}}">{{route.data.title}}</div>
 </div>
