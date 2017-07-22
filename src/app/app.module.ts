@@ -9,22 +9,23 @@ import {HeaderComponent} from './components/header/header.component';
 import {MainNavComponent} from './components/header/main-nav/main-nav.component';
 import {SidePanelComponent} from './components/side-panel/side-panel.component';
 import {SideNavComponent} from './components/side-panel/side-nav/side-nav.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { HomeComponent } from './components/home/home.component';
-import { HomeOffersComponent } from './components/home/home-offers/home-offers.component';
-import { HomeOfferComponent } from './components/home/home-offers/home-offer/home-offer.component';
-import { HomeAdvantagesComponent } from './components/home/home-advantages/home-advantages.component';
-import { AdvantageComponent } from './components/home/home-advantages/home-advantage/home-advantage.component';
-import { HomeTopComponent } from './components/home/home-top/home-top.component';
-import { HomeAboutComponent } from './components/home/home-about/home-about.component';
-import { SpinnerComponent } from './components/spinner/spinner.component';
-import { HomeClientsComponent } from './components/home/home-clients/home-clients.component';
-import { ContactsComponent } from './components/contacts/contacts.component';
-import { ServicesComponent } from './components/services/services.component';
-import { ServiceComponent } from './components/services/service/service.component';
-import { RequirementsComponent } from './components/requirements/requirements.component';
-import { RequirementsPrintComponent } from './components/requirements/requirements-print/requirements-print.component';
-import { RequirementPrintComponent } from './components/requirements/requirements-print/requirement-print/requirement-print.component';
+import {FooterComponent} from './components/footer/footer.component';
+import {HomeComponent} from './components/home/home.component';
+import {HomeOffersComponent} from './components/home/home-offers/home-offers.component';
+import {HomeOfferComponent} from './components/home/home-offers/home-offer/home-offer.component';
+import {HomeAdvantagesComponent} from './components/home/home-advantages/home-advantages.component';
+import {AdvantageComponent} from './components/home/home-advantages/home-advantage/home-advantage.component';
+import {HomeTopComponent} from './components/home/home-top/home-top.component';
+import {HomeAboutComponent} from './components/home/home-about/home-about.component';
+import {SpinnerComponent} from './components/spinner/spinner.component';
+import {HomeClientsComponent} from './components/home/home-clients/home-clients.component';
+import {ContactsComponent} from './components/contacts/contacts.component';
+import {ServicesComponent} from './components/services/services.component';
+import {ServiceComponent} from './components/services/service/service.component';
+import {RequirementsComponent} from './components/requirements/requirements.component';
+import {RequirementsPrintComponent} from './components/requirements/requirements-print/requirements-print.component';
+import {RequirementPrintComponent} from './components/requirements/requirements-print/requirement-print/requirement-print.component';
+import {RequirementsRasterComponent} from './components/requirements/requirements-raster/requirements-raster.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { RequirementPrintComponent } from './components/requirements/requirement
     ServiceComponent,
     RequirementsComponent,
     RequirementsPrintComponent,
-    RequirementPrintComponent
+    RequirementPrintComponent,
+    RequirementsRasterComponent
   ],
   imports: [
     BrowserModule,
@@ -59,4 +61,5 @@ import { RequirementPrintComponent } from './components/requirements/requirement
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+}
