@@ -1,0 +1,22 @@
+@import '../../../styles/constants'
+@import '../../../styles/mixin'
+
+.md-home-reviews
+  background: #ffffff
+  padding: rem(62) 0 rem(44) $home-padding-left
+
+.md-home-reviews__caption
+  font-size: rem(37)
+  width: rem(306)
+  color: #1670c0
+  text-transform: uppercase
+  font-weight: bold
+
+.md-home-reviews__items
+  margin-top: rem(60)
+.md-home-reviews__item
+  display: inline-block
+
+  &:not(:nth-of-type(3n))
+    margin-right: rem(40)
+

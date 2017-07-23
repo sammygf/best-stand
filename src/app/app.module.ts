@@ -28,6 +28,8 @@ import {RequirementPrintComponent} from './components/requirements/requirements-
 import {RequirementsRasterComponent} from './components/requirements/requirements-raster/requirements-raster.component';
 import {RequirementsVectorComponent} from './components/requirements/requirements-vector/requirements-vector.component';
 import {RequirementsTypographicComponent} from './components/requirements/requirements-typographic/requirements-typographic.component';
+import { HomeReviewsComponent } from './components/home/home-reviews/home-reviews.component';
+import { HomeReviewComponent } from './components/home/home-reviews/home-review/home-review.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,9 @@ import {RequirementsTypographicComponent} from './components/requirements/requir
     RequirementPrintComponent,
     RequirementsRasterComponent,
     RequirementsVectorComponent,
-    RequirementsTypographicComponent
+    RequirementsTypographicComponent,
+    HomeReviewsComponent,
+    HomeReviewComponent
   ],
   imports: [
     BrowserModule,
