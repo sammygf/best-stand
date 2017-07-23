@@ -27,6 +27,7 @@ import {RequirementsPrintComponent} from './components/requirements/requirements
 import {RequirementPrintComponent} from './components/requirements/requirements-print/requirement-print/requirement-print.component';
 import {RequirementsRasterComponent} from './components/requirements/requirements-raster/requirements-raster.component';
 import {RequirementsVectorComponent} from './components/requirements/requirements-vector/requirements-vector.component';
+import {RequirementsTypographicComponent} from './components/requirements/requirements-typographic/requirements-typographic.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import {RequirementsVectorComponent} from './components/requirements/requirement
     RequirementsPrintComponent,
     RequirementPrintComponent,
     RequirementsRasterComponent,
-    RequirementsVectorComponent
+    RequirementsVectorComponent,
+    RequirementsTypographicComponent
   ],
   imports: [
     BrowserModule,
