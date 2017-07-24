@@ -1,0 +1,41 @@
+@import '../../styles/mixin'
+@import '../../styles/constants'
+
+.md-footer
+  height: rem(205)
+  width: 100%
+  padding: 0 $home-padding-left rem(55)
+  font-size: rem(14)
+  color: #FFFFFF
+  font-weight: 100
+
+.md-footer__line
+  height: rem(2)
+  background: #6fb4f1
+  margin-bottom: rem(30)
+
+.md-footer__left,
+.md-footer__right
+  float: left
+  height: 100%
+
+.md-footer__left
+  width: rem(168)
+
+  > span
+    display: block
+    margin-top: rem(13)
+
+.md-footer__right
+  margin-left: rem(200)
+
+.md-footer__logo
+  height: rem(27)
+  width: rem(122)
+
+.md-footer__link
+  line-height: rem(30)
+  cursor: pointer
+
+.md-footer__link_active
+  color: #1670c0
