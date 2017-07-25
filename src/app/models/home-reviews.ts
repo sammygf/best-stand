@@ -4,7 +4,7 @@ export class HomeReviews {
   description: string;
   imagePath: string;
 
-  constructor(title, subTitle, description, imagePath) {
+  constructor(title, subTitle, description, imagePath?) {
     this.title = title;
     this.subTitle = subTitle;
     this.description = description;

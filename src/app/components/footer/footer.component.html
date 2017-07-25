@@ -1,3 +1,12 @@
-<p>
-  footer works!
-</p>
+<div class="md-footer">
+  <div class="md-footer__line"></div>
+  <div class="md-footer__left">
+    <img class="md-footer__logo" src="assets/logo.svg" alt="">
+    <span>Высококачественные стенды на любой вкус</span>
+  </div>
+  <div class="md-footer__right">
+    <div class="md-footer__link" *ngFor="let route of routes" routerLink="{{route.path}}"
+         routerLinkActive="md-footer__link_active">{{route.data.title}}
+    </div>
+  </div>
+</div>

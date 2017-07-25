@@ -1,18 +1,27 @@
 @import '../../../../styles/mixin'
 
+$left-width: rem(85)
+$right-width: rem(320)
+
 .md-home-review
-  width: rem(320)
-  display: inline-block
+  height: 100%
+
+.md-home-review__left
+  width: $left-width
+  height: 100%
+  position: absolute
 
 .md-home-review__image
-  height: rem(65)
-  width: rem(65)
+  position: absolute
   background: #2d92db
   border-radius: 50%
-  position: relative
-  float: left
+  z-index: 10
+  width: rem(65)
+  height: rem(65)
+  left: 50%
+  top: 0
+  transform: translateX(-50%)
   overflow: hidden
-
   > img
     position: absolute
     top: 50%
@@ -21,10 +30,20 @@
     max-width: 90%
     max-height: 90%
 
-.md-home-review__content
-  padding: 0 rem(8)
-  width: rem(240)
-  float: right
+.md-home-review__line
+  width: rem(2)
+  position: absolute
+  height: 90%
+  bottom: 0
+  left: 50%
+  transform: translateX(-50%)
+  background: #2d92db
+
+.md-home-review__right
+  padding: 0 rem(8) 0 $left-width
+  width: $right-width
+  display: inline-block
+  vertical-align: top
 
 .md-home-review__title,
 .md-home-review__sub-title,
@@ -45,9 +64,8 @@
   height: rem(13)
 
 .md-home-review__description
-  margin-top: rem(25)
+  margin-top: rem(15)
+  margin-bottom: rem(33)
   font-size: rem(13)
   line-height: rem(18)
-  height: rem(90)
   color: #86929d
-  overflow: hidden

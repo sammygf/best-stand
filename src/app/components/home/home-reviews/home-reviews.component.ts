@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {HomeReviews} from '../../../models/home-reviews';
 
 
@@ -7,10 +7,9 @@ import {HomeReviews} from '../../../models/home-reviews';
   templateUrl: './home-reviews.component.html',
   styleUrls: ['./home-reviews.component.sass']
 })
-export class HomeReviewsComponent implements OnInit {
+export class HomeReviewsComponent {
 
   reviews: Array<HomeReviews>;
-
 
   constructor() {
     this.reviews = [
@@ -18,25 +17,20 @@ export class HomeReviewsComponent implements OnInit {
         ' Берстенёв Стас',
         'Менеджер',
         `Сьогодні  отримала замовлення.  Дякую за швидку доставку.`,
-        '#'
+        'superman.png'
       ),
       new HomeReviews(
         ' Берстенёв Стас',
         'Директор',
         `Хочу выразить благодарность консультанту Зарецкой Анне. 
-        Потрясающий подход к клиенту. Очень приятный, квалификацированый сотрудник.`,
-        '#'
+        Потрясающий подход к клиенту. Очень приятный, квалификацированый сотрудник.`
       ),
       new HomeReviews(
         ' Берстенёв Стас',
         'Студент',
-        `Все изделия, произведенные нашей компанией, отличаются высоким качеством, ярким, красочным.`,
-        '#'
-      ),
+        `Все изделия, произведенные нашей компанией, отличаются высоким качеством, ярким, красочным.`
+      )
     ];
-  }
-
-  ngOnInit() {
   }
 
 }

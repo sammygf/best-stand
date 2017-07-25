@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
+import {Route} from '@angular/router';
+import {AppRoutingModule} from '../../app-routing.module';
 
 @Component({
   selector: 'footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.sass']
 })
-export class FooterComponent implements OnInit {
+export class FooterComponent {
+  routes: Array<Route>;
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(appRouter: AppRoutingModule) {
+    this.routes = appRouter.getRoutes(false);
   }
-
 }
