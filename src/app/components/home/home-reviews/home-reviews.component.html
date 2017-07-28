@@ -1,0 +1,8 @@
+<div class="md-home-reviews">
+  <div class="md-home-reviews__caption">Отзывы</div>
+  <div class="md-home-reviews__items">
+    <div class="md-home-reviews__item" *ngFor="let review of reviews">
+      <home-review [model]="review"></home-review>
+    </div>
+  </div>
+</div>

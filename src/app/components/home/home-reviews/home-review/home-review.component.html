@@ -1,0 +1,13 @@
+<div class="md-home-review">
+  <div class="md-home-review__left">
+    <div class="md-home-review__line"></div>
+    <div class="md-home-review__image">
+      <img [src]="model.imagePath ?'assets/' + model.imagePath : ' '" alt="">
+    </div>
+  </div>
+  <div class="md-home-review__right">
+    <div class="md-home-review__title">{{model.title}}</div>
+    <div class="md-home-review__sub-title">{{model.subTitle}}</div>
+    <div class="md-home-review__description">{{model.description}}</div>
+  </div>
+</div>

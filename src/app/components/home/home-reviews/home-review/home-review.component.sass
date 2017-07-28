@@ -1,0 +1,71 @@
+@import '../../../../styles/mixin'
+
+$left-width: rem(85)
+$right-width: rem(320)
+
+.md-home-review
+  height: 100%
+
+.md-home-review__left
+  width: $left-width
+  height: 100%
+  position: absolute
+
+.md-home-review__image
+  position: absolute
+  background: #2d92db
+  border-radius: 50%
+  z-index: 10
+  width: rem(65)
+  height: rem(65)
+  left: 50%
+  top: 0
+  transform: translateX(-50%)
+
+  > img
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    max-width: 75%
+    max-height: 75%
+
+.md-home-review__line
+  width: rem(2)
+  position: absolute
+  height: 90%
+  bottom: 0
+  left: 50%
+  transform: translateX(-50%)
+  background: #2d92db
+
+.md-home-review__right
+  padding: 0 rem(8) 0 $left-width
+  width: $right-width
+  display: inline-block
+  vertical-align: top
+
+.md-home-review__title,
+.md-home-review__sub-title,
+.md-home-review__description
+  width: 100%
+
+.md-home-review__title
+  color: #000
+  font-size: rem(25)
+  height: rem(25)
+  font-weight: bold
+  white-space: nowrap
+
+.md-home-review__sub-title
+  color: #1670c0
+  margin-top: rem(10)
+  font-size: rem(13)
+  height: rem(13)
+
+.md-home-review__description
+  margin-top: rem(15)
+  margin-bottom: rem(33)
+  font-size: rem(13)
+  line-height: rem(18)
+  color: #86929d
