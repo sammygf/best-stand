@@ -20,15 +20,13 @@ $right-width: rem(320)
   height: rem(65)
   left: 50%
   top: 0
-  transform: translateX(-50%)
+  transform: translateX(-50%) translateZ(0)
+  overflow: hidden
 
   > img
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-    max-width: 75%
-    max-height: 75%
+    height: 100%
+    width: 100%
+    object-fit: cover
 
 .md-home-review__line
   width: rem(2)
