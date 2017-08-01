@@ -3,13 +3,13 @@ export class HomeOffer {
   subTitle: string;
   description: string;
   imagePath: string;
-  routeUrl: string;
+  productId: number;
 
-  constructor(title, subTitle, description, imagePath, routeUrl) {
+  constructor(title, subTitle, description, imagePath, productId) {
     this.title = title;
     this.subTitle = subTitle;
     this.description = description;
     this.imagePath = imagePath;
-    this.routeUrl = routeUrl;
+    this.productId = productId;
   }
 }

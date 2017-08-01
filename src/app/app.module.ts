@@ -30,6 +30,8 @@ import {RequirementsVectorComponent} from './components/requirements/requirement
 import {RequirementsTypographicComponent} from './components/requirements/requirements-typographic/requirements-typographic.component';
 import { HomeReviewsComponent } from './components/home/home-reviews/home-reviews.component';
 import { HomeReviewComponent } from './components/home/home-reviews/home-review/home-review.component';
+import { ProductComponent } from './components/product/product.component';
+import { RoundedButtonComponent } from './components/rounded-button/rounded-button.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +60,9 @@ import { HomeReviewComponent } from './components/home/home-reviews/home-review/
     RequirementsVectorComponent,
     RequirementsTypographicComponent,
     HomeReviewsComponent,
-    HomeReviewComponent
+    HomeReviewComponent,
+    ProductComponent,
+    RoundedButtonComponent
   ],
   imports: [
     BrowserModule,

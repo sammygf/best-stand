@@ -11,6 +11,6 @@ export class FooterComponent {
   routes: Array<Route>;
 
   constructor(appRouter: AppRoutingModule) {
-    this.routes = appRouter.getRoutes(false);
+    this.routes = appRouter.getRoutes();
   }
 }

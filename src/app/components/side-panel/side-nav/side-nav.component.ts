@@ -1,16 +1,22 @@
 import {Component} from '@angular/core';
-import {Route} from '@angular/router';
 import {AppRoutingModule} from '../../../app-routing.module';
+import {ProductsService} from '../../../services/products.service';
 
 @Component({
   selector: 'side-nav',
   templateUrl: 'side-nav.component.html',
-  styleUrls: ['side-nav.component.sass']
+  styleUrls: ['side-nav.component.sass'],
+  providers: [ProductsService]
 })
 export class SideNavComponent {
-  routes: Array<Route>;
+  routes: Array<any> = [];
 
-  constructor(appRouter: AppRoutingModule) {
-    this.routes = appRouter.getRoutes(true);
+  constructor(appRouter: AppRoutingModule, productsService: ProductsService) {
+    productsService.getProducts().forEach((product) => {
+      this.routes.push({
+        title: product.title,
+        path: `${appRouter.routeUrls.PRODUCTS}/${product.id}`
+      });
+    });
   }
 }

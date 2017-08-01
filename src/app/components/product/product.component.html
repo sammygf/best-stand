@@ -1,0 +1,37 @@
+<div class="md-product">
+  <div class="md-product__image">
+    <img src="{{'assets/' + product.imagePath}}" alt="">
+  </div>
+  <div class="md-product__content">
+    <div class="md-product__section">
+      <h3>{{product.title}}</h3>
+      <p [innerHTML]="product.description"></p>
+    </div>
+    <div class="md-product__section">
+      <p><b>Просчет примерной стоимости</b></p>
+      <table class="md-product__info-table">
+        <tr *ngFor="let param of product.params">
+          <td>{{param.title}}</td>
+          <td>{{param.value}}</td>
+        </tr>
+        <tr *ngFor="let trigger of product.triggers; let i = index">
+          <td>{{trigger.title}}</td>
+          <td>
+            <div class="md-product__trigger">
+              <input type="radio" name="trigger" [checked]="trigger.checked"
+                     (change)="triggerChanged(trigger)">
+              <div></div>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <p class="md-product__price">
+        Цена
+        <span><b>{{price}} грн.</b></span>
+      </p>
+    </div>
+    <div class="md-product__button">
+      <rounded-button>Отправить запрос</rounded-button>
+    </div>
+  </div>
+</div>

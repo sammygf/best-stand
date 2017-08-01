@@ -4,19 +4,14 @@ import {HomeComponent} from './components/home/home.component';
 import {ContactsComponent} from './components/contacts/contacts.component';
 import {ServicesComponent} from './components/services/services.component';
 import {RequirementsComponent} from './components/requirements/requirements.component';
+import {ProductComponent} from './components/product/product.component';
 
 const routeUrls = {
   REQUIREMENTS: 'requirements',
   DELIVERY: 'delivery',
   SERVICES: 'services',
   CONTACTS: 'contacts',
-  PHOTO_STAND: 'photo_stand',
-  PRESS_WALL: 'press_wall',
-  FIGURES: 'figures',
-  SENSORMATIC: 'sensormatic',
-  MOBILE_STAND: 'mobile_stand',
-  SIGNBOARDS: 'signboards',
-  LIGHTBOX: 'lightbox'
+  PRODUCTS: 'products'
 };
 
 const routes: Routes = [
@@ -25,7 +20,7 @@ const routes: Routes = [
     component: HomeComponent,
     children: [],
     data: {
-      title: 'Главная'
+      hidden: true
     }
   },
   {
@@ -60,51 +55,11 @@ const routes: Routes = [
     }
   },
   {
-    path: routeUrls.PHOTO_STAND,
+    path: `${routeUrls.PRODUCTS}/:id`,
+    component: ProductComponent,
     children: [],
     data: {
-      title: 'Фотостенд',
-      isSide: true
-    }
-  },
-  {
-    path: routeUrls.PRESS_WALL,
-    children: [],
-    data: {
-      title: 'Пресс-волл',
-      isSide: true
-    }
-  },
-  {
-    path: routeUrls.FIGURES,
-    children: [],
-    data: {
-      title: 'Ростовые фигуры',
-      isSide: true
-    }
-  },
-  {
-    path: routeUrls.SENSORMATIC,
-    children: [],
-    data: {
-      title: 'Сенсорматики',
-      isSide: true
-    }
-  },
-  {
-    path: routeUrls.MOBILE_STAND,
-    children: [],
-    data: {
-      title: 'Мобильные стенды',
-      isSide: true
-    }
-  },
-  {
-    path: routeUrls.SIGNBOARDS,
-    children: [],
-    data: {
-      title: 'Вывески',
-      isSide: true
+      hidden: true
     }
   }
 ];
@@ -118,9 +73,9 @@ export class AppRoutingModule {
     return routeUrls;
   }
 
-  getRoutes(isSide: boolean) {
+  getRoutes() {
     return routes.filter((route) => {
-      return route.path.length > 0 && !!route.data.isSide === isSide;
+      return !route.data.hidden;
     });
   }
 }

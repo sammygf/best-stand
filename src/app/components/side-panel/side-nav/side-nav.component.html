@@ -1,7 +1,5 @@
 <div class="md-side-nav">
-  <!--<div class="md-side-nav__item md-side-nav__item_selected"><span>Фотостенд</span></div>-->
-  <div class="md-side-nav__item" *ngFor="let route of routes" routerLink="{{route.path}}" routerLinkActive="md-side-nav__item_selected">
-    <span>{{route.data.title}}</span>
+  <div class="md-side-nav__item" *ngFor="let route of routes" routerLink="{{route.path}}" routerLinkActive="md-side-nav__item_selected" [routerLinkActiveOptions]="{exact: true}">
+    <span>{{route.title}}</span>
   </div>
-  <!--<div class="md-side-nav__item"><span>Фотостенд</span></div>-->
 </div>

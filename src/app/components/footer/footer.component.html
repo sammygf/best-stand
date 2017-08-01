@@ -6,7 +6,7 @@
   </div>
   <div class="md-footer__right">
     <div class="md-footer__link" *ngFor="let route of routes" routerLink="{{route.path}}"
-         routerLinkActive="md-footer__link_active">{{route.data.title}}
+         routerLinkActive="md-footer__link_active" [routerLinkActiveOptions]="{exact: true}">{{route.data.title}}
     </div>
   </div>
 </div>

@@ -20,7 +20,7 @@ export class HomeOffersComponent implements OnInit {
         `Отличное развлечение для праздника и эффективный рекламный
          ход для привлечения внимания и распространения фото с вашей рекламой.`,
         'superman.png',
-        appRouter.routeUrls.PHOTO_STAND
+        1
       ),
       new HomeOffer(
         'Пресс-волы',
@@ -28,7 +28,7 @@ export class HomeOffersComponent implements OnInit {
         `Печать пресс-воллов эффективное решение как для мероприятий официальных
          мероприятий, так и для неформальных торжеств, для свадьбы или презентаций.`,
         'press-wall.png',
-        appRouter.routeUrls.PRESS_WALL
+        2
       ),
       new HomeOffer(
         'Сенсорматики',
@@ -36,7 +36,7 @@ export class HomeOffersComponent implements OnInit {
         `Сенсорматики (или чекпойнты), — чехлы для антикражных ворот в магазинах,
          супермаркетах и бутиках. Помогут рассказать посетителям об акциях, скидках, новинках.`,
         'sensormatic.png',
-        appRouter.routeUrls.SENSORMATIC
+        4
       ),
       new HomeOffer(
         'Ростовые фигуры',
@@ -44,7 +44,7 @@ export class HomeOffersComponent implements OnInit {
         `Ростовые фигуры — действенный способ привлечения внимания к магазину, лавке,
          торговому или выставочному стенду. Разработка дизайна, печать ростовых фигур.`,
         'figure.png',
-        appRouter.routeUrls.FIGURES
+        3
       ),
       new HomeOffer(
         'Мобильные стенды',
@@ -52,7 +52,7 @@ export class HomeOffersComponent implements OnInit {
         `Различные выносные стенды — баннеры, штендеры, ролл-апы, «пауки» и другие мобильные
          информационно-рекламные стенды для продвижения ваших услуг или товаров.`,
         'mobile-stand.png',
-        appRouter.routeUrls.MOBILE_STAND
+        6
       ),
       new HomeOffer(
         'Лайтбоксы',
@@ -60,7 +60,7 @@ export class HomeOffersComponent implements OnInit {
         `Изготовление и монтаж лайтбоксов для решения различных рекламных задач вашего бизнеса.
          Надежные лайтбоксы — классика наружной рекламы.`,
         'lightbox.png',
-        appRouter.routeUrls.LIGHTBOX
+        7
       )
     ];
   }

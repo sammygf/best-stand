@@ -1,6 +1,9 @@
 @function rem($value)
   @return ($value / 16) + rem
 
+@function font-size($value)
+  @return rem($value * 0.9472)
+
 @mixin mobile
   @media screen and (max-device-width: 504px)
     @content

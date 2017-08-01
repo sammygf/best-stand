@@ -5,5 +5,6 @@
   <div class="md-main-nav__item"
        *ngFor="let route of routes"
        routerLinkActive="md-main-nav__item_active"
+       [routerLinkActiveOptions]="{exact: true}"
        routerLink="{{route.path}}">{{route.data.title}}</div>
 </div>
