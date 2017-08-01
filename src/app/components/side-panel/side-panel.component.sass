@@ -14,8 +14,6 @@ $line-height: rem(30)
   padding-left: $side-panel-padding-left
 
 .md-side-panel__contact
-  color: #f7f5f8
-  font-size: 1rem
   position: relative
   height: $line-height
   line-height: $line-height
@@ -28,8 +26,11 @@ $line-height: rem(30)
     width: rem(14)
     float: left
 
-  > span
+  > span, a
     margin-left: 10%
+    text-decoration: none
+    color: #f7f5f8
+    font-size: rem(16)
 
 .md-side-panel__nav
   margin-top: rem(100)
