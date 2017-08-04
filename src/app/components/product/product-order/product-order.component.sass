@@ -1,0 +1,38 @@
+@import '../../../styles/mixin'
+
+.md-product-order
+  font-size: font-size(14)
+  padding: rem(30) 0
+
+.md-product-order__form
+  input[type="text"],
+  textarea
+    border: rem(1.5) solid #86d1fa
+    margin: rem(5) rem(15)
+    display: block
+    box-sizing: border-box
+    border-radius: rem(5)
+    padding: 0 rem(5)
+    color: #333
+    transition: border-color linear .3s
+
+  input[type="text"]
+    height: rem(25)
+    width: rem(200)
+
+  textarea
+    resize: none
+    width: rem(200)
+
+  &.ng-touched
+    input[type="text"],
+    textarea
+      &.ng-invalid
+        border-color: #ff6e21
+
+  td
+    vertical-align: middle
+
+.md-product-order__button
+  text-align: right
+  padding: rem(30) 0

@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Заказ: {{name}}</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      border-collapse: collapse;
+    }
+    table {
+      font-family: sans-serif, Arial;
+      width: 500px;
+    }
+    td {
+      padding: 5px;
+      vertical-align: top;
+      border: 1px solid #414141;
+      border-collapse: collapse;
+    }
+    td:first-child {
+      background: lightblue;
+      color: #1f1f1f
+    }
+  </style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0">
+  <tr>
+    <td>Имя</td>
+    <td>{{name}}</td>
+  </tr>
+  <tr>
+    <td>Телефон</td>
+    <td>{{phone}}</td>
+  </tr>
+  <tr>
+    <td>E-mail</td>
+    <td><a href="mailto:{{email}}">{{email}}</a></td>
+  </tr>
+  <tr>
+    <td>Товар</td>
+    <td>{{productTitle}}</td>
+  </tr>
+  <tr>
+    <td>Тип товара</td>
+    <td>{{productType}}</td>
+  </tr>
+  <tr>
+    <td>Цена</td>
+    <td>{{productPrice}}</td>
+  </tr>
+  <tr>
+    <td>Пожелания</td>
+    <td>{{comments}}</td>
+  </tr>
+</table>
+</body>
+</html>

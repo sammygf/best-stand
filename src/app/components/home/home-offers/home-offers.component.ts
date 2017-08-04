@@ -12,7 +12,7 @@ export class HomeOffersComponent implements OnInit {
 
   offers: Array<HomeOffer>;
 
-  constructor(appRouter: AppRoutingModule) {
+  constructor() {
     this.offers = [
       new HomeOffer(
         'Фотостенды',

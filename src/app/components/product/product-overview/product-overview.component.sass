@@ -1,0 +1,64 @@
+@import '../../../styles/mixin'
+
+.md-product-overview
+  > h3
+    font-size: font-size(35)
+    text-transform: uppercase
+    font-weight: 500
+    letter-spacing: rem(2)
+
+  > p
+    padding-top: rem(30)
+    line-height: rem(22)
+    font-size: font-size(14)
+  b
+    font-weight: bold
+
+.md-product-overview__info-table
+  margin-top: rem(35)
+
+  tr
+    height: rem(35)
+
+  td
+    vertical-align: middle
+    font-size: font-size(14)
+
+    &:first-of-type
+      white-space: pre
+      min-width: rem(150)
+      padding-right: rem(15)
+
+.md-product-overview__trigger
+  width: rem(20)
+  height: rem(20)
+  position: relative
+  background: #FFFFFF
+  margin: rem(5)
+  border-radius: 15%
+
+  > input
+    cursor: pointer
+    opacity: 0
+    position: absolute
+    width: 100%
+    height: 100%
+    z-index: 1
+
+    & + div
+      position: absolute
+      height: 100%
+      width: 100%
+      background: url('../../../../assets/checked.svg') no-repeat 50% 50%
+      background-size: 70% auto
+      opacity: 0
+
+    &:checked + div
+      opacity: 1
+
+.md-product-overview__price
+  > span
+    padding: 0 rem(50)
+.md-product-overview__button
+  text-align: right
+  padding: rem(30) 0

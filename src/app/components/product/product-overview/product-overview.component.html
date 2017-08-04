@@ -1,0 +1,27 @@
+<div class="md-product-overview">
+  <p><b>Просчет примерной стоимости</b></p>
+  <table class="md-product-overview__info-table">
+    <tr *ngFor="let param of product.params">
+      <td>{{param.title}}</td>
+      <td>{{param.value}}</td>
+    </tr>
+    <tr *ngFor="let trigger of product.triggers; let i = index">
+      <td>{{trigger.title}}</td>
+      <td>
+        <div class="md-product-overview__trigger">
+          <input type="radio" name="trigger"
+                 [checked]="trigger.checked"
+                 (change)="triggerChanged(i)">
+          <div></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <p class="md-product-overview__price">
+    Цена
+    <span><b>{{product.price}} грн.</b></span>
+  </p>
+  <div class="md-product-overview__button">
+    <rounded-button [routerLink]="orderRoutePath">Отправить запрос</rounded-button>
+  </div>
+</div>

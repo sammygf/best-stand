@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  email: 'info@beststand.com.ua',
+  emailEndpoint: '/mail/'
 };

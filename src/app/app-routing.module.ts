@@ -5,13 +5,18 @@ import {ContactsComponent} from './components/contacts/contacts.component';
 import {ServicesComponent} from './components/services/services.component';
 import {RequirementsComponent} from './components/requirements/requirements.component';
 import {ProductComponent} from './components/product/product.component';
+import {ProductOverviewComponent} from './components/product/product-overview/product-overview.component';
+import {ProductOrderComponent} from './components/product/product-order/product-order.component';
+import {ProductOrderCompleteComponent} from './components/product/product-order-complete/product-order-complete.component';
 
 const routeUrls = {
   REQUIREMENTS: 'requirements',
   DELIVERY: 'delivery',
   SERVICES: 'services',
   CONTACTS: 'contacts',
-  PRODUCTS: 'products'
+  PRODUCTS: 'products',
+  ORDER: 'order',
+  ORDER_COMPLETE: 'order_complete'
 };
 
 const routes: Routes = [
@@ -57,7 +62,11 @@ const routes: Routes = [
   {
     path: `${routeUrls.PRODUCTS}/:id`,
     component: ProductComponent,
-    children: [],
+    children: [
+      {path: '', component: ProductOverviewComponent},
+      {path: routeUrls.ORDER, component: ProductOrderComponent},
+      {path: routeUrls.ORDER_COMPLETE, component: ProductOrderCompleteComponent}
+    ],
     data: {
       hidden: true
     }
@@ -69,13 +78,11 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {
-  get routeUrls() {
+  static get routeUrls() {
     return routeUrls;
   }
 
-  getRoutes() {
-    return routes.filter((route) => {
-      return !route.data.hidden;
-    });
+  static getRoutes() {
+    return routes.filter(route => !route.data.hidden);
   }
 }
