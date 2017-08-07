@@ -2,6 +2,7 @@ import {Component, OnInit, OnDestroy} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Product} from '../../models/product';
 import {ProductsService} from '../../services/products.service';
+// import {AppRoutingModule} from '../../app-routing.module';
 
 @Component({
   selector: 'product',
@@ -12,27 +13,21 @@ import {ProductsService} from '../../services/products.service';
 export class ProductComponent implements OnInit, OnDestroy {
   private productChanged: any;
   product: Product;
-  price = 0;
 
-  constructor(private route: ActivatedRoute, private productsService: ProductsService) {
+  constructor(private route: ActivatedRoute,
+              private productsService: ProductsService) {
   }
 
   ngOnInit() {
-    this.productChanged = this.route.params.subscribe(params => {
-      const id = +params['id'];
-      this.product = this.productsService.getProduct(id);
-      this.price = this.product.price;
-      if (this.product.triggers) {
-        this.triggerChanged(this.product.triggers.find(trigger => trigger.checked));
-      }
-    });
+    this.productChanged = this.route.params.subscribe(this.onProductChanged.bind(this));
   }
 
   ngOnDestroy() {
     this.productChanged.unsubscribe();
   }
 
-  triggerChanged(trigger) {
-    this.price = this.product.price + trigger.price;
+  private onProductChanged(params) {
+    const id = +params['id'];
+    this.product = this.productsService.getProduct(id);
   }
 }

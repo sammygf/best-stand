@@ -1,6 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 
 import {AppRoutingModule} from './app-routing.module';
@@ -28,10 +28,13 @@ import {RequirementPrintComponent} from './components/requirements/requirements-
 import {RequirementsRasterComponent} from './components/requirements/requirements-raster/requirements-raster.component';
 import {RequirementsVectorComponent} from './components/requirements/requirements-vector/requirements-vector.component';
 import {RequirementsTypographicComponent} from './components/requirements/requirements-typographic/requirements-typographic.component';
-import { HomeReviewsComponent } from './components/home/home-reviews/home-reviews.component';
-import { HomeReviewComponent } from './components/home/home-reviews/home-review/home-review.component';
-import { ProductComponent } from './components/product/product.component';
-import { RoundedButtonComponent } from './components/rounded-button/rounded-button.component';
+import {HomeReviewsComponent} from './components/home/home-reviews/home-reviews.component';
+import {HomeReviewComponent} from './components/home/home-reviews/home-review/home-review.component';
+import {ProductComponent} from './components/product/product.component';
+import {RoundedButtonComponent} from './components/rounded-button/rounded-button.component';
+import {ProductOverviewComponent} from './components/product/product-overview/product-overview.component';
+import {ProductOrderComponent} from './components/product/product-order/product-order.component';
+import {ProductOrderCompleteComponent} from './components/product/product-order-complete/product-order-complete.component';
 
 @NgModule({
   declarations: [
@@ -62,13 +65,17 @@ import { RoundedButtonComponent } from './components/rounded-button/rounded-butt
     HomeReviewsComponent,
     HomeReviewComponent,
     ProductComponent,
-    RoundedButtonComponent
+    RoundedButtonComponent,
+    ProductOverviewComponent,
+    ProductOrderComponent,
+    ProductOrderCompleteComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

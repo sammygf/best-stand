@@ -10,7 +10,7 @@ import {AppRoutingModule} from '../../app-routing.module';
 export class FooterComponent {
   routes: Array<Route>;
 
-  constructor(appRouter: AppRoutingModule) {
-    this.routes = appRouter.getRoutes();
+  constructor() {
+    this.routes = AppRoutingModule.getRoutes();
   }
 }

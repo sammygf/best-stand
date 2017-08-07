@@ -11,11 +11,11 @@ import {ProductsService} from '../../../services/products.service';
 export class SideNavComponent {
   routes: Array<any> = [];
 
-  constructor(appRouter: AppRoutingModule, productsService: ProductsService) {
+  constructor(productsService: ProductsService) {
     productsService.getProducts().forEach((product) => {
       this.routes.push({
         title: product.title,
-        path: `${appRouter.routeUrls.PRODUCTS}/${product.id}`
+        path: `${AppRoutingModule.routeUrls.PRODUCTS}/${product.id}`
       });
     });
   }

@@ -13,7 +13,7 @@ export class HomeOfferComponent {
   model: HomeOffer;
   routePath: string;
 
-  constructor(appRouter: AppRoutingModule) {
-    this.routePath = appRouter.routeUrls.PRODUCTS;
+  constructor() {
+    this.routePath = AppRoutingModule.routeUrls.PRODUCTS;
   }
 }
