@@ -1,4 +1,4 @@
-<div class="md-home-offer">
+<div class="md-home-offer" routerLink="{{routePath + '/' + model.productId}}">
   <div class="md-home-offer__image">
     <img src="{{'assets/' + model.imagePath}}" alt="">
   </div>
@@ -6,6 +6,6 @@
     <div class="md-home-offer__title">{{model.title}}</div>
     <div class="md-home-offer__sub-title">{{model.subTitle}}</div>
     <div class="md-home-offer__description">{{model.description}}</div>
-    <a href="#" class="md-home-offer__link" routerLink="{{routePath + '/' + model.productId}}">Подробнее</a>
+    <a href="#" class="md-home-offer__link">Подробнее</a>
   </div>
 </div>
