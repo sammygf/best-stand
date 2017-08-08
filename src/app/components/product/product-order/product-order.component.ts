@@ -1,10 +1,11 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {Product} from '../../../models/product';
 import {ProductsService} from '../../../services/products.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Order} from '../../../models/order';
 import {OrderService} from '../../../services/order.service';
+import {AppRoutingModule} from '../../../app-routing.module';
 
 @Component({
   selector: 'product-order',
@@ -24,6 +25,13 @@ export class ProductOrderComponent implements OnInit, OnDestroy {
     comments: new FormControl()
   });
 
+  constructor(private route: ActivatedRoute,
+              private productsService: ProductsService,
+              private orderService: OrderService,
+              private router: Router) {
+    this.order = new Order();
+  }
+
   get name() {
     return this.orderForm.get('name');
   }
@@ -40,16 +48,14 @@ export class ProductOrderComponent implements OnInit, OnDestroy {
     return this.orderForm.get('comments');
   }
 
-  constructor(private route: ActivatedRoute,
-              private productsService: ProductsService,
-              private orderService: OrderService) {
-    this.order = new Order();
-  }
-
   submitOrder() {
     if (this.orderForm.valid) {
       this.order.product = this.product;
       this.orderService.sendOrder(this.order);
+      this.router.navigate([`../${AppRoutingModule.routeUrls.ORDER_COMPLETE}`], {relativeTo: this.route});
+      setTimeout(() => {
+        this.router.navigateByUrl('/');
+      }, 3000);
     } else {
       this.orderForm.markAsTouched();
     }

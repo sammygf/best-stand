@@ -4,16 +4,12 @@ import 'rxjs/add/operator/map';
 import * as Mustache from 'mustache';
 import {Order} from '../models/order';
 import {environment} from '../../environments/environment';
-import {Router, ActivatedRoute} from '@angular/router';
-import {AppRoutingModule} from '../app-routing.module';
 
 @Injectable()
 export class OrderService {
   template: string;
 
-  constructor(private http: Http,
-              private router: Router,
-              private route: ActivatedRoute) {
+  constructor(private http: Http) {
     http.get('mail/template.html')
       .map(res => res.text())
       .subscribe(html => this.template = html);
@@ -25,10 +21,15 @@ export class OrderService {
       phone: order.phone,
       email: order.email,
       comments: order.comments,
-      productTitle: order.product.title,
-      productPrice: order.product.price,
-      productType: order.product.triggers && order.product.triggers.find(trigger => trigger.checked).title
     };
+
+    if (order.product) {
+      Object.assign(emailData, {
+        productTitle: order.product.title,
+        productPrice: order.product.price,
+        productType: order.product.triggers && order.product.triggers.find(trigger => trigger.checked).title
+      });
+    }
     const output = Mustache.render(this.template, emailData);
     const headers = new Headers();
     const params = new URLSearchParams();
@@ -44,10 +45,5 @@ export class OrderService {
     this.http.post(environment.emailEndpoint, params, {headers: headers}).subscribe(() => {
       console.log('Sent');
     });
-
-    this.router.navigate([`../${AppRoutingModule.routeUrls.ORDER_COMPLETE}`], {relativeTo: this.route});
-    setTimeout(() => {
-      this.router.navigateByUrl('/');
-    }, 3000);
   }
 }

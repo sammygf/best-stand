@@ -10,19 +10,27 @@
     <div class="md-contacts__info-heading">Наш email:</div>
     <a href="mailto:info@beststand.com.ua" class="md-contacts__info-link">info@beststand.com.ua</a>
   </div>
-  <form class="md-contacts__form">
-    <div class="md-contacts__form-group md-contacts__form-group_left">
-      <input type="text" class="md-contacts__form-control" placeholder="Введите имя" required>
-      <img src="assets/man-icon.svg" class="md-contacts__form-icon" alt="">
+  <div class="md-contacts__form">
+    <form *ngIf="!confirmed" (ngSubmit)="submitOrder()" [formGroup]="orderForm">
+      <div class="md-contacts__form-group md-contacts__form-group_left">
+        <input type="text" class="md-contacts__form-control" placeholder="Введите имя" formControlName="name"
+               [(ngModel)]="order.name">
+        <img src="assets/man-icon.svg" class="md-contacts__form-icon" alt="">
+      </div>
+      <div class="md-contacts__form-group md-contacts__form-group_right">
+        <img src="assets/mail-icon.svg" class="md-contacts__form-icon" alt="">
+        <input type="email" class="md-contacts__form-control" placeholder="Введите почту" formControlName="email"
+               [(ngModel)]="order.email">
+      </div>
+      <textarea class="md-contacts__form-textarea" placeholder="Напишите нам свои примечания к заказу"
+                formControlName="comments" [(ngModel)]="order.comments"></textarea>
+      <div class="md-contacts__form-group">
+        <span class="md-contacts__form-info">Наш менеджер ответит вам в ближайшее время.</span>
+        <button type="submit" class="md-contacts__form-button">Отправить</button>
+      </div>
+    </form>
+    <div *ngIf="confirmed" class="md-contacts__form__confirmation">
+      Спасибо, ваш заказ отправлен! Мы постараемся ответить вам как можно быстрее.
     </div>
-    <div class="md-contacts__form-group md-contacts__form-group_right">
-      <img src="assets/mail-icon.svg" class="md-contacts__form-icon" alt="">
-      <input type="email" class="md-contacts__form-control" placeholder="Введите почту" required>
-    </div>
-    <textarea class="md-contacts__form-textarea" placeholder="Напишите нам свои примечания к заказу"></textarea>
-    <div class="md-contacts__form-group">
-      <span class="md-contacts__form-info">Наш менеджер ответит вам в ближайшее время.</span>
-      <button type="submit" class="md-contacts__form-button">Отправить</button>
-    </div>
-  </form>
+  </div>
 </div>

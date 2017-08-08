@@ -37,14 +37,21 @@
   font-size: rem(16)
   margin-top: rem(5)
 
-.md-contacts__form-group
-  overflow: hidden
-
 .md-contacts__form
   position: absolute
   width: rem(600)
   bottom: rem(80)
   right: rem(105)
+  height: rem(300)
+
+  form.ng-touched
+    input,
+    textarea
+      &.ng-invalid
+        border-color: #ff6e21
+
+.md-contacts__form-group
+  overflow: hidden
 
 .md-contacts__form-group_left
   float: left
@@ -58,7 +65,7 @@
   padding: rem(7) rem(14)
   border-radius: rem(5)
   outline: none
-  border: none
+  border: rem(1.5) solid #86d1fa
   &::placeholder
     color: #86929d
 
@@ -72,12 +79,13 @@
   height: rem(167)
   width: 100%
   background: #FFFFFF
-  resize: vertical
+  resize: none
   font-size: rem(13)
   border-radius: rem(10)
   margin-top: rem(32)
   outline: none
-  border: none
+  border: rem(1.5) solid #86d1fa
+  transition: border-color linear .3s
   padding: rem(16) rem(24)
   &::placeholder
     color: #86929d
@@ -104,3 +112,12 @@
   font-size: rem(16)
   color: #FFFFFF
   padding-left: rem(10)
+.md-contacts__form__confirmation
+  position: absolute
+  width: 70%
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  text-align: center
+  font-size: font-size(20)
+  color: #FFFFFF
